@@ -22,6 +22,13 @@ security:
                 path: app_logout
                 # where to redirect after logout
                 # target: app_any_route
+            login_link:
+                check_route: login_check
+                signature_properties:
+                    - id
+                lifetime: 600
+                max_uses: 2
+                default_target_path: /profile
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
